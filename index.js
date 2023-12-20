@@ -11,7 +11,7 @@ app.use(cors());
 app.get('/',(req,res)=>{
     res.send('Server is Running 🎉🏃‍♂️')
 })
-app.use("/api/v1", router)
+app.use(router)
 let PATH =  process.env.PORT || 3344;
 let server =app.listen(PATH, ()=>{
     dbConnection();
